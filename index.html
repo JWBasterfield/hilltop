@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hilltop Renovation</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Basic page setup */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* --- Header --- */
+        .header {
+            background: linear-gradient(90deg, #2a2a2a, #1a1a1a);
+            color: #ffffff;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 2px solid #333;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            font-weight: 700;
+        }
+        .header p {
+            font-size: 1.2em;
+            color: #aaa;
+            max-width: 600px;
+            margin: 10px auto 0;
+        }
+
+        /* --- Main Gallery Container --- */
+        .gallery-container {
+            max-width: 1100px;
+            margin: 40px auto; 
+            padding: 0 20px;
+        }
+
+        /* --- Individual Room Card --- */
+        .room-card {
+            background-color: #1e1e1e; 
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            margin-bottom: 50px;
+            overflow: hidden; 
+            border: 1px solid #333; 
+        }
+        
+        .room-card h2 {
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 600;
+            padding: 30px 20px;
+            margin: 0;
+            border-bottom: 1px solid #333;
+            color: #ffffff;
+        }
+
+        /* --- Before/After Image Container --- */
+        .image-comparison {
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center;
+            padding: 20px 10px; 
+        }
+
+        /* --- Single Image Wrapper --- */
+        .image-wrapper {
+            flex: 1; 
+            min-width: 300px; 
+            padding: 15px;
+            box-sizing: border-box; 
+        }
+        
+        .image-wrapper h3 {
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+        }
+
+        .image-wrapper img {
+            width: 100%; /* Makes the image responsive */
+            
+            /* ======== VVVV: THESE ARE THE NEW LINES VVVV ======== */
+            aspect-ratio: 4 / 3;  /* Sets a 4:3 shape. (Try 16 / 9 for widescreen) */
+            object-fit: cover;    /* Fills the box, crops if needed. No stretching! */
+            /* ======== ^^^^: END OF NEW LINES ^^^^ ======== */
+            
+            height: auto; /* This line is no longer strictly needed but is safe to keep */
+            border-radius: 8px;
+            border: 1px solid #444; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+        
+        .image-wrapper img:hover {
+            transform: scale(1.02); 
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5); 
+        }
+
+        /* --- Footer --- */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9em;
+            color: #888;
+            border-top: 1px solid #333;
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Hilltop Renovation</h1>
+        <p>A gallery showing the before and after of our project.</p>
+    </header>
+
+    <main class="gallery-container">
+
+        <section class="room-card">
+            <h2>Master Bedroom</h2>
+            <div class="image-comparison">
+                
+                <div class="image-wrapper">
+                    <h3>Before</h3>
+                    <img src="img/master/before.webp" alt="Kitchen before renovation">
+                </div>
+                
+                <div class="image-wrapper">
+                    <h3>After</h3>
+                    <img src="img/master/after.jpeg" alt="Kitchen after renovation">
+                </div>
+
+            </div>
+        </section>
+        <section class="room-card">
+            <h2>Bedroom 2</h2>
+            <div class="image-comparison">
+                
+                <div class="image-wrapper">
+                    <h3>Before</h3>
+                    <img src="img/archie/before.webp" alt="Living room before renovation">
+                </div>
+                
+                <div class="image-wrapper">
+                    <h3>After</h3>
+                    <img src="livingroom-after.jpg" alt="Living room after renovation">
+                </div>
+
+            </div>
+        </section>
+        <section class="room-card">
+            <h2>Living Room</h2>
+            <div class="image-comparison">
+                
+                <div class="image-wrapper">
+                    <h3>Before</h3>
+                    <img src="img/livingroom/before.webp" alt="Bathroom before renovation">
+                </div>
+                
+                <div class="image-wrapper">
+                    <h3>After</h3>
+                    <img src="img/livingroom/after.jpg" alt="Bathroom after renovation">
+                </div>
+
+            </div>
+        </section>
+        </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Basterfield</p>
+    </footer>
+
+</body>
+</html>
